@@ -1,0 +1,33 @@
+<div class="row">
+<form style="padding-top: 20px;max-width: 300px;margin:auto;">
+  <div class="form-group">
+    <select name="selectedNumPowerClients" class="form-control" [(ngModel)]="selectedNumPowerClients" (ngModelChange)="calc()">
+      <option *ngFor="let i of numPowerClients">{{i}}
+      </option>
+    </select>
+    <small id="emailHelp" class="form-text text-muted">Number Power Clients</small>
+  </div>
+
+  <div class="form-group">
+    <select name="selectedNumOfExternalSystems" class="form-control" [(ngModel)]="selectedNumOfExternalSystems" (ngModelChange)="calc()">
+      <option *ngFor="let i of numOfExternalSystems">{{i}}
+      </option>
+    </select>
+    <small id="emailHelp" class="form-text text-muted">Number of external systems</small>
+  </div>
+
+  <div class="form-group">
+    <select name="selectedNumOfCoresInProc" class="form-control" [(ngModel)]="selectedNumOfCoresInProc" (ngModelChange)="calc()">
+      <option *ngFor="let i of numOfCoresInProc" [ngValue]="i">{{i.cpu}}
+      </option>
+    </select>
+    <small id="emailHelp" class="form-text text-muted">Number of cores in processor / RAM </small>
+  </div>
+  
+  <div class="form-group">
+    <label class="">server_amount</label>
+    {{ serverAmount }}
+  </div>
+</form>
+
+</div>
